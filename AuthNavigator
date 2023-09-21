@@ -1,0 +1,20 @@
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import react from "react";
+import Welcome from './Welcome';
+import Loginscreen from './Login';
+
+import Welcomescreen from "./Welcome";
+
+const Stack=createNativeStackNavigator();
+
+function AuthNavigator(){
+    console.log(Stack);
+    return(
+        <Stack.Navigator screenOptions={{}} initialRouteName={WELCOMESCREEN}>
+            <Stack.Screen name="LOGIN" component={Loginscreen}></Stack.Screen>
+            <Stack.Screen name="WELCOMESCREEN" component={Welcomescreen}></Stack.Screen>
+
+    </Stack.Navigator>
+    )
+};
+export default AuthNavigator;
